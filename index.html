@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chang Yu-an (An) 的個人網站</title>
+	<style>
+		:root {
+			--bg: #0b1020;
+			--bg-soft: #151d34;
+			--card: rgba(255, 255, 255, 0.06);
+			--text: #f2f5ff;
+			--muted: #b7c0de;
+			--accent: #5eead4;
+			--accent-2: #60a5fa;
+			--border: rgba(255, 255, 255, 0.14);
+			--shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			font-family: "Noto Sans TC", "Segoe UI", sans-serif;
+			color: var(--text);
+			background:
+				radial-gradient(circle at 10% 20%, rgba(96, 165, 250, 0.2), transparent 35%),
+				radial-gradient(circle at 85% 15%, rgba(94, 234, 212, 0.18), transparent 30%),
+				linear-gradient(160deg, var(--bg) 0%, var(--bg-soft) 100%);
+			display: grid;
+			place-items: center;
+			padding: 24px;
+		}
+
+		.container {
+			width: min(860px, 100%);
+			background: var(--card);
+			border: 1px solid var(--border);
+			border-radius: 20px;
+			box-shadow: var(--shadow);
+			backdrop-filter: blur(8px);
+			overflow: hidden;
+		}
+
+		.hero {
+			padding: 40px 30px 24px;
+			border-bottom: 1px solid var(--border);
+		}
+
+		h1 {
+			margin: 0;
+			font-size: clamp(1.7rem, 4vw, 2.5rem);
+			letter-spacing: 0.02em;
+			line-height: 1.25;
+		}
+
+		.subtitle {
+			margin-top: 12px;
+			color: var(--muted);
+			font-size: 1.05rem;
+		}
+
+		.content {
+			display: grid;
+			grid-template-columns: 1.5fr 1fr;
+			gap: 24px;
+			padding: 28px 30px 34px;
+		}
+
+		.card {
+			border: 1px solid var(--border);
+			background: rgba(0, 0, 0, 0.18);
+			border-radius: 16px;
+			padding: 20px;
+		}
+
+		h2 {
+			margin: 0 0 12px;
+			font-size: 1.2rem;
+			color: #dbeafe;
+		}
+
+		p {
+			margin: 0;
+			line-height: 1.75;
+			color: #e8edff;
+		}
+
+		.portfolio-link {
+			display: inline-block;
+			margin-top: 14px;
+			padding: 10px 16px;
+			border-radius: 999px;
+			text-decoration: none;
+			font-weight: 700;
+			color: #071029;
+			background: linear-gradient(90deg, var(--accent), var(--accent-2));
+			transition: transform 0.18s ease, box-shadow 0.18s ease;
+			box-shadow: 0 6px 18px rgba(94, 234, 212, 0.28);
+		}
+
+		.portfolio-link:hover {
+			transform: translateY(-1px);
+			box-shadow: 0 10px 24px rgba(96, 165, 250, 0.35);
+		}
+
+		.footer-note {
+			margin-top: 16px;
+			font-size: 0.9rem;
+			color: var(--muted);
+		}
+
+		@media (max-width: 720px) {
+			.hero {
+				padding: 30px 20px 20px;
+			}
+
+			.content {
+				grid-template-columns: 1fr;
+				padding: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main class="container">
+		<section class="hero">
+			<h1>Chang Yu-an (An) 的個人網站</h1>
+			<p class="subtitle">Hi，我是 An，歡迎來到我的網站！</p>
+		</section>
+
+		<section class="content">
+			<article class="card">
+				<h2>自我介紹</h2>
+				<p>
+					我熱愛網頁設計與前端開發，喜歡把想法轉化成兼具美感與實用性的數位體驗。
+					目前持續學習新技術，並透過專案累積更多實作經驗。
+				</p>
+			</article>
+
+			<aside class="card">
+				<h2>我的作品集</h2>
+				<p>想看更多我做過的專案與練習成果，歡迎前往作品集頁面。</p>
+				<a class="portfolio-link" href="https://example.com" target="_blank" rel="noopener noreferrer">
+					前往作品集
+				</a>
+				<p class="footer-note">可將連結替換成你的真實作品集網址。</p>
+			</aside>
+		</section>
+	</main>
+</body>
+</html>
