@@ -6,13 +6,15 @@
 	<title>Chang Yu-an (An) 的個人網站</title>
 	<style>
 		:root {
-			--bg: #111111;
-			--bg-soft: #1a1a1a;
+			--bg: #101010;
+			--bg-soft: #1b1b1b;
 			--paper: #f4f4f2;
 			--ink: #111111;
 			--muted: #555555;
 			--card: #f0f0ee;
 			--border: #242424;
+			--coffee: #6f4e37;
+			--red: #8a1c1c;
 			--shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
 		}
 
@@ -60,6 +62,28 @@
 			z-index: 1;
 		}
 
+		nav {
+			display: flex;
+			gap: 8px;
+			flex-wrap: wrap;
+			margin-top: 14px;
+		}
+
+		nav a {
+			text-decoration: none;
+			font-size: 0.9rem;
+			padding: 6px 10px;
+			border: 1px solid var(--border);
+			border-radius: 2px;
+			color: var(--ink);
+			background: #efefeb;
+		}
+
+		nav a:hover {
+			background: var(--ink);
+			color: var(--paper);
+		}
+
 		h1 {
 			margin: 0;
 			font-size: clamp(1.7rem, 4vw, 2.5rem);
@@ -101,6 +125,26 @@
 			padding-bottom: 8px;
 		}
 
+		.tag {
+			display: inline-block;
+			font-size: 0.75rem;
+			padding: 3px 8px;
+			margin-bottom: 12px;
+			border: 1px solid;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+
+		.tag.coffee {
+			color: var(--coffee);
+			border-color: var(--coffee);
+		}
+
+		.tag.red {
+			color: var(--red);
+			border-color: var(--red);
+		}
+
 		p {
 			margin: 0;
 			line-height: 1.75;
@@ -115,20 +159,38 @@
 			text-decoration: none;
 			font-weight: 700;
 			color: var(--paper);
-			background: var(--ink);
-			border: 1px solid var(--ink);
+			background: var(--red);
+			border: 1px solid var(--red);
 			transition: background-color 0.2s ease, color 0.2s ease;
 		}
 
 		.portfolio-link:hover {
 			background: transparent;
-			color: var(--ink);
+			color: var(--red);
 		}
 
 		.footer-note {
 			margin-top: 16px;
 			font-size: 0.9rem;
 			color: var(--muted);
+		}
+
+		.quick-links {
+			margin-top: 14px;
+			display: grid;
+			gap: 8px;
+		}
+
+		.quick-links a {
+			color: var(--coffee);
+			text-decoration: none;
+			border-bottom: 1px dotted var(--coffee);
+			width: fit-content;
+		}
+
+		.quick-links a:hover {
+			color: var(--red);
+			border-bottom-color: var(--red);
 		}
 
 		@media (max-width: 720px) {
@@ -148,24 +210,36 @@
 		<section class="hero">
 			<h1>Chang Yu-an (An) 的個人網站</h1>
 			<p class="subtitle">Hi，我是 An，歡迎來到我的網站！</p>
+			<nav>
+				<a href="index.html">首頁</a>
+				<a href="about.html">關於我</a>
+				<a href="portfolio.html">作品集</a>
+				<a href="contact.html">聯絡我</a>
+			</nav>
 		</section>
 
 		<section class="content">
 			<article class="card">
+				<span class="tag coffee">Coffee Notes</span>
 				<h2>自我介紹</h2>
 				<p>
 					我熱愛網頁設計與前端開發，喜歡把想法轉化成兼具美感與實用性的數位體驗。
 					目前持續學習新技術，並透過專案累積更多實作經驗。
 				</p>
+				<div class="quick-links">
+					<a href="about.html">閱讀我的完整介紹</a>
+					<a href="portfolio.html">查看精選作品與連結</a>
+				</div>
 			</article>
 
 			<aside class="card">
+				<span class="tag red">Featured</span>
 				<h2>我的作品集</h2>
-				<p>想看更多我做過的專案與練習成果，歡迎前往作品集頁面。</p>
-				<a class="portfolio-link" href="https://example.com" target="_blank" rel="noopener noreferrer">
-					前往作品集
+				<p>想看更多我做過的專案與練習成果，歡迎前往作品集頁面，含外部連結入口。</p>
+				<a class="portfolio-link" href="portfolio.html">
+					前往作品集頁
 				</a>
-				<p class="footer-note">可將連結替換成你的真實作品集網址。</p>
+				<p class="footer-note">復古黑白基底，搭配咖啡與紅色作為重點點綴。</p>
 			</aside>
 		</section>
 	</main>
