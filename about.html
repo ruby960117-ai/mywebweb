@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>關於我 | Chang Yu-an (An) 的個人網站</title>
+	<style>
+		:root {
+			--bg: #101010;
+			--bg-soft: #1b1b1b;
+			--paper: #f4f4f2;
+			--ink: #111111;
+			--muted: #555555;
+			--card: #f0f0ee;
+			--border: #242424;
+			--coffee: #6f4e37;
+			--red: #8a1c1c;
+			--shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			font-family: "Noto Serif TC", "PMingLiU", serif;
+			background:
+				repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 3px),
+				linear-gradient(160deg, var(--bg) 0%, var(--bg-soft) 100%);
+			display: grid;
+			place-items: center;
+			padding: 24px;
+		}
+
+		.container {
+			width: min(900px, 100%);
+			background: linear-gradient(180deg, #f8f8f6 0%, #ecece9 100%);
+			border: 2px solid var(--border);
+			border-radius: 8px;
+			box-shadow: var(--shadow);
+			overflow: hidden;
+		}
+
+		header {
+			padding: 34px 28px 20px;
+			border-bottom: 1px solid var(--border);
+		}
+
+		nav {
+			display: flex;
+			gap: 8px;
+			flex-wrap: wrap;
+			margin-top: 14px;
+		}
+
+		nav a {
+			text-decoration: none;
+			font-size: 0.9rem;
+			padding: 6px 10px;
+			border: 1px solid var(--border);
+			border-radius: 2px;
+			color: var(--ink);
+			background: #efefeb;
+		}
+
+		nav a.active {
+			background: var(--ink);
+			color: var(--paper);
+		}
+
+		h1 {
+			margin: 0;
+			font-size: clamp(1.6rem, 3.8vw, 2.2rem);
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			color: var(--ink);
+		}
+
+		.subtitle {
+			margin-top: 10px;
+			color: var(--muted);
+			font-style: italic;
+		}
+
+		main {
+			display: grid;
+			grid-template-columns: 1.3fr 1fr;
+			gap: 20px;
+			padding: 24px 28px 30px;
+		}
+
+		.card {
+			background: var(--card);
+			border: 1px solid var(--border);
+			border-radius: 6px;
+			padding: 18px;
+		}
+
+		.tag {
+			display: inline-block;
+			padding: 3px 8px;
+			font-size: 0.75rem;
+			letter-spacing: 0.08em;
+			border: 1px solid var(--coffee);
+			color: var(--coffee);
+			margin-bottom: 10px;
+		}
+
+		h2 {
+			margin: 0 0 10px;
+			border-bottom: 1px dashed var(--border);
+			padding-bottom: 8px;
+			color: var(--ink);
+		}
+
+		p, li {
+			color: #222;
+			line-height: 1.75;
+		}
+
+		ul {
+			margin: 0;
+			padding-left: 20px;
+		}
+
+		.highlight {
+			color: var(--red);
+			font-weight: 700;
+		}
+
+		@media (max-width: 760px) {
+			main {
+				grid-template-columns: 1fr;
+				padding: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>關於我</h1>
+			<p class="subtitle">Chang Yu-an (An) 的創作背景與學習日常</p>
+			<nav>
+				<a href="index.html">首頁</a>
+				<a class="active" href="about.html">關於我</a>
+				<a href="portfolio.html">作品集</a>
+				<a href="contact.html">聯絡我</a>
+			</nav>
+		</header>
+		<main>
+			<section class="card">
+				<span class="tag">Coffee Journal</span>
+				<h2>我正在做的事</h2>
+				<p>
+					我專注在前端設計與互動體驗，喜歡在黑白結構中加上一點
+					<span class="highlight">咖啡棕與酒紅</span>，讓畫面更有故事感。
+				</p>
+				<p>
+					平常會透過小型專案練習版面設計、動畫節奏與元件可重用性。
+				</p>
+			</section>
+			<aside class="card">
+				<h2>學習清單</h2>
+				<ul>
+					<li>現代 CSS 版面與響應式設計</li>
+					<li>JavaScript 互動效果與資料呈現</li>
+					<li>設計語言一致性與元件化思維</li>
+				</ul>
+			</aside>
+		</main>
+	</div>
+</body>
+</html>

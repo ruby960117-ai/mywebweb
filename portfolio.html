@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>作品集 | Chang Yu-an (An) 的個人網站</title>
+	<style>
+		:root {
+			--bg: #101010;
+			--bg-soft: #1b1b1b;
+			--paper: #f4f4f2;
+			--ink: #111111;
+			--muted: #555555;
+			--card: #f0f0ee;
+			--border: #242424;
+			--coffee: #6f4e37;
+			--red: #8a1c1c;
+			--shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			font-family: "Noto Serif TC", "PMingLiU", serif;
+			background:
+				repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 3px),
+				linear-gradient(160deg, var(--bg) 0%, var(--bg-soft) 100%);
+			display: grid;
+			place-items: center;
+			padding: 24px;
+		}
+
+		.container {
+			width: min(980px, 100%);
+			background: linear-gradient(180deg, #f8f8f6 0%, #ecece9 100%);
+			border: 2px solid var(--border);
+			border-radius: 8px;
+			box-shadow: var(--shadow);
+			overflow: hidden;
+		}
+
+		header {
+			padding: 34px 28px 20px;
+			border-bottom: 1px solid var(--border);
+		}
+
+		h1 {
+			margin: 0;
+			font-size: clamp(1.6rem, 3.8vw, 2.2rem);
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			color: var(--ink);
+		}
+
+		.subtitle {
+			margin-top: 10px;
+			color: var(--muted);
+			font-style: italic;
+		}
+
+		nav {
+			display: flex;
+			gap: 8px;
+			flex-wrap: wrap;
+			margin-top: 14px;
+		}
+
+		nav a {
+			text-decoration: none;
+			font-size: 0.9rem;
+			padding: 6px 10px;
+			border: 1px solid var(--border);
+			border-radius: 2px;
+			color: var(--ink);
+			background: #efefeb;
+		}
+
+		nav a.active {
+			background: var(--ink);
+			color: var(--paper);
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 16px;
+			padding: 24px 28px 30px;
+		}
+
+		.card {
+			background: var(--card);
+			border: 1px solid var(--border);
+			border-radius: 6px;
+			padding: 16px;
+		}
+
+		.badge {
+			display: inline-block;
+			font-size: 0.72rem;
+			padding: 2px 8px;
+			border: 1px solid var(--coffee);
+			color: var(--coffee);
+			margin-bottom: 10px;
+		}
+
+		h2 {
+			margin: 0 0 10px;
+			font-size: 1.1rem;
+			color: var(--ink);
+		}
+
+		p {
+			margin: 0;
+			line-height: 1.7;
+			color: #222;
+		}
+
+		.card a {
+			display: inline-block;
+			margin-top: 12px;
+			padding: 8px 12px;
+			text-decoration: none;
+			border: 1px solid var(--red);
+			color: var(--paper);
+			background: var(--red);
+			border-radius: 3px;
+		}
+
+		.card a:hover {
+			background: transparent;
+			color: var(--red);
+		}
+
+		@media (max-width: 880px) {
+			.grid {
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		@media (max-width: 620px) {
+			.grid {
+				grid-template-columns: 1fr;
+				padding: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>作品集</h1>
+			<p class="subtitle">精選專案與連結入口</p>
+			<nav>
+				<a href="index.html">首頁</a>
+				<a href="about.html">關於我</a>
+				<a class="active" href="portfolio.html">作品集</a>
+				<a href="contact.html">聯絡我</a>
+			</nav>
+		</header>
+		<section class="grid">
+			<article class="card">
+				<span class="badge">UI</span>
+				<h2>復古個人網站</h2>
+				<p>黑白為主視覺，咖啡與紅色作點綴的多頁式設計。</p>
+				<a href="https://example.com" target="_blank" rel="noopener noreferrer">查看作品</a>
+			</article>
+			<article class="card">
+				<span class="badge">Web</span>
+				<h2>作品展示頁</h2>
+				<p>以卡片式排版呈現不同類型專案，重視閱讀節奏。</p>
+				<a href="https://example.com" target="_blank" rel="noopener noreferrer">查看作品</a>
+			</article>
+			<article class="card">
+				<span class="badge">Practice</span>
+				<h2>互動元件練習</h2>
+				<p>收錄按鈕、導覽列與區塊模組化練習成果。</p>
+				<a href="https://example.com" target="_blank" rel="noopener noreferrer">查看作品</a>
+			</article>
+		</section>
+	</div>
+</body>
+</html>

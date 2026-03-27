@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>聯絡我 | Chang Yu-an (An) 的個人網站</title>
+	<style>
+		:root {
+			--bg: #101010;
+			--bg-soft: #1b1b1b;
+			--paper: #f4f4f2;
+			--ink: #111111;
+			--muted: #555555;
+			--card: #f0f0ee;
+			--border: #242424;
+			--coffee: #6f4e37;
+			--red: #8a1c1c;
+			--shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			font-family: "Noto Serif TC", "PMingLiU", serif;
+			background:
+				repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 3px),
+				linear-gradient(160deg, var(--bg) 0%, var(--bg-soft) 100%);
+			display: grid;
+			place-items: center;
+			padding: 24px;
+		}
+
+		.container {
+			width: min(860px, 100%);
+			background: linear-gradient(180deg, #f8f8f6 0%, #ecece9 100%);
+			border: 2px solid var(--border);
+			border-radius: 8px;
+			box-shadow: var(--shadow);
+			overflow: hidden;
+		}
+
+		header {
+			padding: 34px 28px 20px;
+			border-bottom: 1px solid var(--border);
+		}
+
+		h1 {
+			margin: 0;
+			font-size: clamp(1.6rem, 3.8vw, 2.2rem);
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			color: var(--ink);
+		}
+
+		.subtitle {
+			margin-top: 10px;
+			color: var(--muted);
+			font-style: italic;
+		}
+
+		nav {
+			display: flex;
+			gap: 8px;
+			flex-wrap: wrap;
+			margin-top: 14px;
+		}
+
+		nav a {
+			text-decoration: none;
+			font-size: 0.9rem;
+			padding: 6px 10px;
+			border: 1px solid var(--border);
+			border-radius: 2px;
+			color: var(--ink);
+			background: #efefeb;
+		}
+
+		nav a.active {
+			background: var(--ink);
+			color: var(--paper);
+		}
+
+		main {
+			padding: 24px 28px 30px;
+		}
+
+		.card {
+			background: var(--card);
+			border: 1px solid var(--border);
+			border-radius: 6px;
+			padding: 18px;
+		}
+
+		.tag {
+			display: inline-block;
+			padding: 3px 8px;
+			font-size: 0.75rem;
+			letter-spacing: 0.08em;
+			border: 1px solid var(--red);
+			color: var(--red);
+			margin-bottom: 10px;
+		}
+
+		h2 {
+			margin: 0 0 10px;
+			color: var(--ink);
+			border-bottom: 1px dashed var(--border);
+			padding-bottom: 8px;
+		}
+
+		p {
+			margin: 0;
+			line-height: 1.75;
+			color: #222;
+		}
+
+		.links {
+			margin-top: 12px;
+			display: grid;
+			gap: 8px;
+		}
+
+		.links a {
+			width: fit-content;
+			text-decoration: none;
+			color: var(--coffee);
+			border-bottom: 1px dotted var(--coffee);
+		}
+
+		.links a:hover {
+			color: var(--red);
+			border-bottom-color: var(--red);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>聯絡我</h1>
+			<p class="subtitle">歡迎合作、交流與聊天</p>
+			<nav>
+				<a href="index.html">首頁</a>
+				<a href="about.html">關於我</a>
+				<a href="portfolio.html">作品集</a>
+				<a class="active" href="contact.html">聯絡我</a>
+			</nav>
+		</header>
+		<main>
+			<section class="card">
+				<span class="tag">Let's Talk</span>
+				<h2>聯絡方式</h2>
+				<p>如果你對我的作品有興趣，或想一起做點有趣的專案，歡迎透過以下方式找到我。</p>
+				<div class="links">
+					<a href="mailto:an@example.com">an@example.com</a>
+					<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+					<a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+				</div>
+			</section>
+		</main>
+	</div>
+</body>
+</html>
